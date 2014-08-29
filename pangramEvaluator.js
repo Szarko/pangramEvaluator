@@ -3,13 +3,13 @@
 // Tail recursive Pangram Evaluation
 exports.recursiveProcess = function(sentence, letterCode, missingLetters) {
   var firstLetterCode = 97; // charCode for letter 'a'
-  var lastLetterCode = 123; // charCode for letter 'z'
+  var lastLetterCode = 122; // charCode for letter 'z'
   sentence = sentence.toLowerCase();
   letterCode = letterCode || firstLetterCode;
   var currentLetter = String.fromCharCode(letterCode);
   missingLetters = missingLetters || [];
 
-  if (letterCode === lastLetterCode) return missingLetters.join('') || null;
+  if (letterCode > lastLetterCode) return missingLetters.join('') || null;
   if (!sentence.match(currentLetter)) missingLetters.push(currentLetter);
 
   return this.recursiveProcess(sentence, letterCode + 1, missingLetters);
