@@ -2,10 +2,12 @@
 
 #### A simple application to determine whether an inputted string contains all the letters of the alphabet.
 
-##### Instructions:
-###### Run application with NodeJS.
-###### Install 'jasmine-node' NPM to run test suite: npm install jasmine-node -g
+##### Requirements:
+###### NodeJS required to run application.
+###### 'jasmine-node' NPM required to run test suite: 
+###### Installation: npm install jasmine-node -g
 
+##### Instructions:
 ```
 Usage:
 Accepts 2 parameters:
